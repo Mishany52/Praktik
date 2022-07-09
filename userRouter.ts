@@ -6,5 +6,5 @@ const userRouter = Router()
 userRouter.post('/set-info', userControll.setInfo)
 userRouter.post('/sign-up', userControll.signUp)
 userRouter.post('/login', userControll.login)
-
+userRouter.get('/get-info', userControll.getInfo)
 export default userRouter

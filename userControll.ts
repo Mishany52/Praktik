@@ -3,7 +3,9 @@ import userService from "./userService"
 class UserController {
     async getInfo(request: any, response: any, next: any){
         try {
-            
+            let token = request.cookies.token
+            const userInfo = await userService.getInfo(token)
+            response.json(userInfo).status(200)
         } catch (error) {
             next(error)
         }
@@ -23,7 +25,7 @@ class UserController {
             await tokenService.saveToken(token)
 
             response.cookie('token', token, { maxAge: 900000, httpOnly: true })
-            response.json(profile).status(200)
+            // response.json(profile).status(200)
         } catch (error) {
             next(error)
         }

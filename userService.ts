@@ -21,7 +21,17 @@ class UserService {
         await user.save()
         return new UserDTO(user)
     }
-
+    async getInfo(token: any){
+        if (!token){
+            throw error(400, "token  Undefined")
+        }
+        const payload = tokenService.verifyToken(token)
+        const user = await User.findByPk(payload.id)
+        if (!user){
+            throw error(400, 'user Undefined')
+        }
+        return [user.id, user.email, user.latitude, user.longitude]
+    }
     async signUp(email: string, password: string){
         if (!email || !password){
             throw error(400, "email or password Undefined")
