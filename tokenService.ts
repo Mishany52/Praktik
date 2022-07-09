@@ -4,15 +4,17 @@ import error from "http-errors"
 import {UserDTO} from './userDTO';
 class TokenService {
     generateToken(payload: any) {
+        // console.log('+++++++++++++++',payload)
         return jwt.sign(payload, 'privateKey', { expiresIn: '1h' });
     }
 
     async saveToken(token_:string){
         // console.log(token_)
-        const token = await Token.create({token: token_})
-        if(!token){
+        if(!token_){
             throw error(400, 'No founded token')
         }
+        const token = await Token.create({token: token_})
+        
     }
 
     verifyToken(token: string){

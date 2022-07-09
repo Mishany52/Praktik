@@ -10,6 +10,7 @@ class UserService {
             throw error(400, "token or latitude or longitude Undefined")
         }
         const payload = tokenService.verifyToken(token)
+        // console.log('----------------------------', payload)
         const user =  await User.findByPk(payload.id)
         if (!user){
             throw error(400, 'user Undefined')
@@ -45,8 +46,10 @@ class UserService {
         if (user.password != password){
             throw error(400, "passwords unequal")
         }
-        console.log({...user})
-        const token = tokenService.generateToken({...user})
+        
+        const userDTO = new UserDTO(user)
+        const token = tokenService.generateToken({...userDTO})
+        // console.log(token)
         await tokenService.saveToken(token)
         return {user, token}
         

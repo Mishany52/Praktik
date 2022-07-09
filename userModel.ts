@@ -34,6 +34,7 @@ User.init(
     },
     {
         sequelize,
+        timestamps: false,
         modelName: "user"
     }
 )
@@ -51,7 +52,7 @@ Token.init(
         },
         token:
         {
-            type:DataTypes.STRING,
+            type:DataTypes.TEXT,
         },
         
     

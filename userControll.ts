@@ -23,7 +23,7 @@ class UserController {
             await tokenService.saveToken(token)
 
             response.cookie('token', token, { maxAge: 900000, httpOnly: true })
-            // response.json(profile).status(200)
+            response.json(profile).status(200)
         } catch (error) {
             next(error)
         }
