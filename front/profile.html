@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/profile.css">
+    <head>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=cd26dfb0-cb9b-4de8-8779-6a17773f7322&lang=ru_RU" type="text/javascript">
+        </script>
+    </head>
+</head>
+<body onload="">
+
+    <article class="container">
+
+        <!--Блок формы-->
+        <div class="form-box">
+            <!-- Форма регистрации -->
+            <form action="#" class="form form_signup">
+    
+
+                    <h3 class="form__title">GeoPos</h3>
+                    <h2 class="period">Доступный промежуток времяни</h2>
+                    <h1 class="info_period"></h1>
+
+
+                    <div class="input_container">
+                        <div class="from">
+                            <p>
+                                <h3 class="form__h">От</h3>
+                            </p>
+                            <input type="date" class="date" id="DateFrom" placeholder="Дата" min="2017-04-01">
+                            <input type="time" class="time minute" id="TimeFrom" placeholder="Минуты">
+                        </div>
+                        
+                    
+                    
+                        
+                        <div class="to">
+                            <p>
+                                <h3 class="form__h">До</h3>
+                            </p>
+                            <input type="date" class="date" placeholder="Дата" id="DateTo">
+                            <input type="time" class="time minute" placeholder="Минуты" id="TimeTo">
+                            <p>
+                                <button class="form__btn_find" id="find">Поиск</button>
+                            </p>
+                        </div>
+                        
+                        
+                    </div>
+
+                
+            </form>
+        </div>
+    
+        <div class="map" id="map"></div>
+    </article>
+    
+<script src="profile.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    
+    background-color: #A5AEFF;
+    margin: 0;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_container{
+    width: 760px;
+}
+.form-box{
+    display: flex; 
+    /* outline: solid; */
+    
+}
+
+
+.map{
+    width: 760px;
+    height: 450px;
+    align-items: center;
+
+}
+
+.block{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.form__title{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    line-height: 38px;
+}
+.period{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000;
+    text-align: center;
+}
+
+.info_period{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000;
+    text-align: center;
+}
+.form__h{
+    font: Fredoka;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+.form__btn_find{
+    width: 100%;
+    padding: 10px;
+    border:  1px white;
+    border-radius: 2px;
+    font-size: 20px;
+}
+.date{
+    padding: 0px;
+    padding-left: 24px;
+    border:  1px white;
+    border-radius: 2px;
+    margin-right: 31px;
+    font-size: 16px;
+    width: 192px;
+    height: 40px
+}
+
+.time{
+    
+    text-align: center;
+    border:  1px white;
+    border-radius: 2px;
+    font-size: 16px;
+    width: 102px;
+    height: 40px;
+    margin-right: 31px;
+}
+.from{
+    width: max-content;
+    margin: auto;
+    /* outline: solid; */
+
+}
+.to{
+    width: max-content;
+    margin: auto;
+}
+
+.minute{
+    margin-right: 0;
+}
